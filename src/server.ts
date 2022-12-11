@@ -27,7 +27,9 @@ async function start() {
   await app.register(rewardsRoutes);
   await app.register(subscribersRoutes);
 
-  app.listen({ port: 3333 });
+  const port = Number(process.env.PORT) || 3333;
+
+  app.listen({ port });
 }
 
 start();
