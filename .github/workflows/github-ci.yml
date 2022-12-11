@@ -1,4 +1,4 @@
-name: DevCalouro Newsletter CI
+name: Newsletter @dev.calouro CI
 
 on: [push, pull_request]
 
