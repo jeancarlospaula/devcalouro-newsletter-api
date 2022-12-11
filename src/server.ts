@@ -17,6 +17,12 @@ async function start() {
     origin: true,
   });
 
+  app.get('/', (request, response) => {
+    return response.status(200).send({
+      message: 'API is running',
+    });
+  });
+
   await app.register(issuesRoutes);
   await app.register(rewardsRoutes);
   await app.register(subscribersRoutes);
