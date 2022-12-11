@@ -13,9 +13,19 @@ datasource db {
 model subscribers {
   id               String    @id @default(cuid())
   email            String    @unique
-  member           Boolean   @default(false)
-  indicatedBy      String?
   confirmedEmail   Boolean   @default(false)
   confirmedEmailAt DateTime?
+  indicatedBy      String?
+  indications      Int       @default(0)
+  member           Boolean   @default(false)
+  memberSince      DateTime?
+  aidedFoundation  String?
   createdAt        DateTime  @default(now())
+}
+
+model rewards {
+  id          Int    @id @default(autoincrement())
+  name        String
+  indications Int    @unique
+  url         String
 }
