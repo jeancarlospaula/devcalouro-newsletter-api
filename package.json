@@ -2,10 +2,11 @@
   "name": "devcalouro-newsletter-api",
   "version": "1.0.0",
   "description": "API da Newsletter @dev.calouro",
-  "main": "src/server.ts",
+  "main": "dist/server.js",
   "scripts": {
     "test": "jest",
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc"
   },
   "keywords": [
     "Newsletter",
@@ -45,6 +46,7 @@
     "moment": "^2.29.4",
     "nodemailer": "^6.8.0",
     "pino": "^8.7.0",
+    "ts-node-dev": "^2.0.0",
     "zod": "^3.19.1"
   },
   "type": "module"
