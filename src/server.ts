@@ -29,7 +29,7 @@ async function start() {
 
   const port = Number(process.env.PORT) || 3333;
 
-  app.listen({ port });
+  app.listen({ port, host: '0.0.0.0' });
 }
 
 start();
